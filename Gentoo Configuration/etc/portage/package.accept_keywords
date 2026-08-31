@@ -1,0 +1,32 @@
+#Ly
+x11-misc/ly ~amd64
+app-misc/brightnessctl ~amd64
+
+#Sublime Text
+app-editors/sublime-text ~amd64
+
+#Librewolf
+www-client/librewolf ~amd64
+dev-libs/nss ~amd64
+dev-libs/nspr ~amd64
+
+#Steam
+games-util/steam-launcher ~amd64
+sys-libs/libudev-compat ~amd64
+games-util/game-device-udev-rules ~amd64
+
+#i915 Driver
+media-libs/mesa-amber ~amd64
+
+#LazyGit
+dev-vcs/lazygit ~amd64
+
+#i3
+x11-misc/i3lock-color ~amd64
+
+#Xwinwrap
+x11-misc/xwinwrap ~amd64
+
+#PC-Man-FM
+x11-misc/pcmanfm ~amd64
+x11-libs/libfm ~amd64

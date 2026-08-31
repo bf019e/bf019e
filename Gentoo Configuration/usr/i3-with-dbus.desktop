@@ -1,0 +1,11 @@
+#Put This File On /usr/share/xsessions
+
+[Desktop Entry]
+Name=i3 (D-Bus Session)
+Comment=improved dynamic tiling window manager
+Exec=dbus-run-session i3
+TryExec=i3
+Type=XSession
+X-LightDM-DesktopName=i3 (D-Bus Session)
+DesktopNames=i3
+Keywords=tiling;wm;windowmanager;window;manager;

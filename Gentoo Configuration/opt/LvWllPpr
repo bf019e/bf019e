@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#Option 0 - Live Wallpaper
+nice xwinwrap -b -s -st -sp -nf -ov -g 1366x768+0+0 -- mplayer -wid WID -fs -nosound -sws 4 -framedrop -lavdopts fast:skiploopfilter=all -panscan 1.0 -speed 0.75 ~/Descargas/ChainaVT.mp4 -loop 0 &

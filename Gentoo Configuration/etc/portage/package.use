@@ -1,0 +1,69 @@
+#InstallKernel
+sys-kernel/installkernel grub dracut
+
+#Doas
+app-admin/doas persist
+
+#SeatD
+sys-auth/seatd server
+
+#Ly
+x11-misc/ly X
+
+#Mesa Progs
+x11-apps/mesa-progs X
+
+#Eye Of Gnome
+x11-libs/gdk-pixbuf jpeg
+
+#GNU Image Manipulation Program
+app-text/poppler cairo
+media-libs/gegl lcms cairo
+
+#Audacity
+media-sound/audacity alsa
+
+#Steam
+sys-libs/libudev-compat abi_x86_32
+x11-libs/libdrm abi_x86_32
+media-libs/libpulse abi_x86_32
+media-libs/vulkan-loader X abi_x86_32
+media-libs/mesa abi_x86_32
+games-util/game-device-udev-rules elogind
+dev-libs/expat abi_x86_32
+llvm-core/llvm abi_x86_32
+media-libs/libsndfile abi_x86_32
+dev-libs/glib abi_x86_32
+sys-apps/util-linux abi_x86_32
+media-libs/flac abi_x86_32
+media-sound/mpg123-base abi_x86_32
+x11-libs/libpciaccess abi_x86_32
+media-libs/freetype abi_x86_32 harfbuzz
+sys-libs/zlib abi_x86_32
+sys-apps/systemd-utils abi_x86_32
+dev-libs/elfutils abi_x86_32
+media-libs/harfbuzz abi_x86_32
+x11-libs/cairo abi_x86_32 X aqua
+llvm-core/llvm xml
+dev-libs/libxml2 abi_x86_32
+virtual/libudev abi_x86_32
+
+#Minecraft + CCCP Mod correction driver of GM45 (Graphic Chip, CELERON T3500) 
+media-libs/mesa-amber video_cards_i915 video_cards_i965
+media-libs/mesa video_cards_i915
+x11-drivers/xf86-video-intel dri uxa
+
+#i3
+#Rofi
+x11-misc/rofi X
+#Conky
+app-admin/conky X imlib lua lua-imlib lua-cairo bundled-toluapp mouse-events wayland truetype xinerama lua-cairo-xlib
+#Feh
+media-gfx/feh xinerama
+#PC-Man-FM
+x11-libs/libfm gtk udisks
+#Gnome Virtual File System
+gnome-base/gvfs udisks fuse archive elogind policykit mtp
+
+#FTP Server
+net-ftp/proftpd sftp

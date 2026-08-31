@@ -1,0 +1,29 @@
+#!/sbin/openrc-run
+# Copyright 2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+#This File Is For Open-RC
+
+name="tg-up daemon"
+description=""
+command=/usr/bin/tg-up
+command_args="${tg-up_args}"
+
+depend() {
+	need localmount
+}
+
+start() {
+    ebegin "Creando cgroup tg-up"
+
+    mkdir -p /sys/fs/cgroup/tg-up
+
+    echo "+memory" > /sys/fs/cgroup/cgroup.subtree_control
+
+    echo 268435456 > /sys/fs/cgroup/tg-up/memory.max
+
+    eend $?
+}
+
+stop() {
+    rmdir /sys/fs/cgroup/tg-up 2>/dev/null
+}

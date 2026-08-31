@@ -1,0 +1,24 @@
+#!/bin/bash
+
+xrandr --newmode "1280x1024"  138.75  1280 1368 1504 1728  1024 1027 1034 1072 -hsync +vsync
+
+xrandr --addmode VGA1 "1280x1024"
+
+#Laptop Screen
+#xrandr --output LVDS1 --mode 1366x768 --output VGA1 --off
+
+#Dual Monitor
+#xrandr --output LVDS1 --mode 1366x768 --pos 1366x0 --output VGA1 --primary --mode 1280x1024
+
+#Monitor Only
+#xrandr --output LVDS1 --off --output VGA1 --primary --mode 1280x1024
+
+#Dual Monitor (Laptop Screen As Primary)
+#xrandr --output LVDS1 --mode 1366x768 --primary --output VGA1 --mode 1280x1024 --pos 1366x0
+
+if xrandr | grep -q "VGA1 connected"; then
+    xrandr --output LVDS1 --off --output VGA1 --primary --mode 1280x1024
+fi
+
+#Comprueba si la tapa del pc esta abierta o no
+#cat /proc/acpi/button/lid/*/state

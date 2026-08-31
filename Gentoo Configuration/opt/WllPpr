@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#Select Only One Of This
+
+#Option 1 - Static Wallpaper
+#sleep 1 && feh --bg-fill ~/Descargas/ChainaVT.jp 
+
+#Option 2 - Static Wallpaper (Dual Monitor)
+sleep 1 && feh \
+--bg-fill ~/Descargas/ChainaVT.jpg \
+--bg-fill ~/Descargas/ChainaVT.jpg
+
+#Option 2 - Live Wallpaper (mpv)
+#sleep 1 && nice xwinwrap -b -s -fs -st -sp -nf -ov -fdt -- mpv --loop --osc=no  --profile=sw-fast -wid WID --really-quiet --framedrop=vo --hwdec=auto-safe --no-audio --panscan="1.0" ~/Descargas/ChainaVT.mp4
+
+#Option 3 - Live Wallpaper (mplayer)
+sleep 1 && nice xwinwrap -b -s -fs -st -sp -nf -ov -fdt -- mplayer -wid WID -nosound -fs -sws 4 -framedrop -lavdopts fast:skiploopfilter=all -panscan 1.0 -speed 0.75 ~/Descargas/ChainaVT.mp4 -loop 0
+
+#Opcion 4 - Live Wallpaper [mpv] (Dual Monitor)
+#sleep 1 && nice xwinwrap -b -s -st -sp -nf -ov -fdt -g 1280x1024+0+0 -- mpv --loop --osc=no  --profile=sw-fast -wid WID --really-quiet --framedrop=vo --hwdec=auto-safe --no-audio --panscan="1.0" ~/Descargas/ChainaVT.mp4
+#sleep 1 && nice xwinwrap -b -s -st -sp -nf -ov -fdt 1366x768+1280+0 -- mpv --loop --osc=no  --profile=sw-fast -wid WID --really-quiet --framedrop=vo --hwdec=auto-safe --no-audio --panscan="1.0" ~/Descargas/ChainaVT.mp4
+
+#Opcion 5 - Live Wallpaper [mplayer] (Dual Monitor)
+#sleep 1 && nice xwinwrap -b -s -st -sp -nf -ov -fdt -g 1280x1024+0+0 -- mplayer -wid WID -nosound -fs -sws 4 -framedrop -lavdopts fast:skiploopfilter=all -panscan 1.0 -speed 0.75 ~/Descargas/ChainaVT.mp4 -loop 0 &
+
+#sleep 1 && nice xwinwrap -b -s -st -sp -nf -ov -fdt -g 1366x768+0+0 -- mplayer -wid WID -nosound -fs -sws 4 -framedrop -lavdopts fast:skiploopfilter=all -panscan 1.0 -speed 0.75 ~/Descargas/ChainaVT.mp4 -loop 0 &
+
+
+#Experimental
+#sleep 1 && nice xwinwrap -b -s -fs -st -sp -nf -ov -fdt -- mplayer -wid WID -nosound -fs  -framedrop -panscan 1.0 -speed 0.75 ChainaVT.mp4 -loop 0

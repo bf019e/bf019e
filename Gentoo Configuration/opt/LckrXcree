@@ -1,0 +1,19 @@
+#!/bin/bash
+
+xautolock -disable
+
+i3lock \
+--blur 5 \
+--clock \
+--indicator   \
+--time-color ffffff \
+--date-color ffffff \
+--ring-color 000000 \
+--keyhl-color ffffff \
+--ringwrong-color 000000 \
+--ringver-color 000000 \
+--verif-color ffffff \
+--wrong-color ffffff \
+--no-unlock-indicator \
+
+xautolock -enable

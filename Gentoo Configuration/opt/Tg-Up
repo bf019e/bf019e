@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo $$ | doas tee /sys/fs/cgroup/tg-up/cgroup.procs >/dev/null
+
+exec "$@"
