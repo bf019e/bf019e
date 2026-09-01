@@ -1,0 +1,91 @@
+#!/bin/bash
+source config
+
+#Startup Menu
+Auto_Now="~/.local/share/pip/bin/telegram-upload -a --no-thumbnail --to $Chan_Now *.*"
+
+echo "Pro Tip: Para Agilizar El Uso De Este Script "
+
+menu() {
+    echo "====================================="
+    echo "   Jigokumeguri System Engineering   "
+    echo "====================================="
+    echo ""
+    echo "Selected Chan:"
+    echo "$Chan_Now_Name"
+    echo ""
+    echo "1. Add"
+    echo "2. Delete"
+    echo "3. List Chan's"
+    echo "4. Change Chan"
+    echo "5. Auto (--here --all)"
+    echo "6. Auto (Select Dir --here --all)"
+    echo "7. Auto"
+    echo "8. Manual (Old Script Type On Bashrc)"
+    echo "9. Salr"
+    echo "--------------------"
+}
+
+while true; do
+    menu
+    read -p "Elige una opción [1-9]: " Sel
+    
+    case $Sel in
+        1)
+	    echo "A continuacion, Escribe el nombre del Chan"
+	    read -p > chans
+	    ;;
+        2)
+            echo "Por Favor Seleccione El Chan A Elminar"
+	    #read -p
+            ;;
+        3)
+            cat chans | less
+            ;;
+	4) 
+	    read -p "Escriba El Numero Del Chan" Sel_Chan
+	    sed -i "s/^Chan_Now_Name=.*/Chan_Now=$Sel_Chan/" config
+	    sed -i "s/^Chan_Now=.*/Chan_Now_Name=$Sel_Chan/" config
+	    ;;
+        5)
+            echo "Se Desanconseja Utilizar Esta Opcion debido a limitaciones de Telegram"
+	    echo "Desea Continuar? [Y/n]"
+	    
+	    ;;
+        6)
+            read -p "Por Favor Determine El Directorio En EL Cual Iniciar El Script" Sel_Dir
+	    pwd > Prev_Dir
+	    cd $Sel_Dir
+	    $Auto_Now
+	    ;;
+        7)
+           
+	    ;;
+        8)
+
+            echo "[WARN] El Siguiente Scrip Es Anticuado"
+            echo "[WARN] El Siguiente Scrip Requiere Como Depentendia El Siguiente Paquete [xfce-base/thunar]"
+	    Manual_Auto
+	    ;;
+        9)
+            echo "Saliendo del programa..."
+            exit 0
+            ;;
+        *)
+            echo ""
+            echo "¡Opción no válida! Elige un número del 1 al 4."
+            sleep 2
+            ;;
+    esac
+done
+
+
+#Añadir Canales
+
+#Remover Canales
+
+#Upload Script
+
+#LPTMD Quien me manda a meterme a sistemas?!
+
+#~/.local/share/pip/bin/telegram-upload -a --no-thumbnail --to
